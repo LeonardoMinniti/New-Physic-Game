@@ -16,8 +16,8 @@ TagManager:
   - 
   - 
   - Front
+  - Map
   - Background
-  - 
   - 
   - 
   - 
@@ -45,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2171156229
+    locked: 0
+  - name: Map
+    uniqueID: 2397747829
     locked: 0
   - name: Front
     uniqueID: 1069634109
