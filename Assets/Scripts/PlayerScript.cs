@@ -19,6 +19,9 @@ public class PlayerScript : MonoBehaviour {
     public bool roundIsOver = true;
     public bool isPlayer1;
 
+    public Slider playerHealthSlider;
+    public Slider playerGasSlider;
+
     public float speed;
     public float gas;
     private float angle;
@@ -43,6 +46,8 @@ public class PlayerScript : MonoBehaviour {
                 Vector2 movement = new Vector2(moveSpeedHorizontal, 0f);
 
                 rbPlayer.AddForce(movement * speed);
+
+                UpdateSlider();
 
             }
 
@@ -155,6 +160,12 @@ public class PlayerScript : MonoBehaviour {
         shotsRb2d.AddForce((playerAngle.transform.GetChild(0).position - transform.position) *shotPower);
         
         
+    }
+
+    public void UpdateSlider()
+    {
+        playerHealthSlider.value = Health;
+        playerGasSlider.value = gas;
     }
 
     public void NewRound()

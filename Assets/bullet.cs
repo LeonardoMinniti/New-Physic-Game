@@ -12,10 +12,14 @@ public class bullet : MonoBehaviour {
             if(Mathf.RoundToInt(collision.relativeVelocity.x + collision.relativeVelocity.y) > 0)
             {
                 collision.transform.GetComponent<PlayerScript>().Health -= Mathf.RoundToInt(collision.relativeVelocity.x + collision.relativeVelocity.y)*25;
+                GameManager.Player1.UpdateSlider();
+                GameManager.Player2.UpdateSlider();
             }
             else
             {
                 collision.transform.GetComponent<PlayerScript>().Health += Mathf.RoundToInt(collision.relativeVelocity.x + collision.relativeVelocity.y)*25;
+                GameManager.Player1.UpdateSlider();
+                GameManager.Player2.UpdateSlider();
             }
         }
         else if (collision.transform.CompareTag("MapDestructable"))

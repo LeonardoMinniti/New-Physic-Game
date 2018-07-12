@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\bullet.cs" />
+     <Compile Include="Assets\explosion.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Player1Script.cs" />
+     <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <None Include="Assets\Assets\Spritesheet\spritesheet_other.xml" />
      <None Include="Assets\Assets\Spritesheet\bgElements_spritesheet.xml" />
      <None Include="Assets\Assets\Spritesheet\spritesheet_players.xml" />

@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
         Player1 = GameObject.Find("Player 1").GetComponent<PlayerScript>();
         Player2 = GameObject.Find("Player 2").GetComponent<PlayerScript>();
         Player1.NewRound();
+        Player1.UpdateSlider();
+        Player2.UpdateSlider();
         
 	}
 	
@@ -48,7 +50,7 @@ public class GameManager : MonoBehaviour {
         float angle = Vector3.Angle(windDirection.normalized, Vector3.right);
         Debug.Log("angle: " + angle);
         windArrow.transform.rotation = Quaternion.Euler(0f, 0f, -90f + angle);
-        windStrength.text = ("Wind Strength is :" + (windDirection.normalized.x + windDirection.normalized.y) / 2);
+        windStrength.text = ("Wind Strength is :" + Mathf.Floor(Mathf.Abs((windDirection.normalized.x + windDirection.normalized.y) / 2) * 100));
     }
 
     void OnTriggerStay2D(Collider2D collider2D)
