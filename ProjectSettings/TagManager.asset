@@ -52,3 +52,6 @@ TagManager:
   - name: Front
     uniqueID: 1069634109
     locked: 0
+  - name: GasFront
+    uniqueID: 1472090183
+    locked: 0
