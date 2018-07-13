@@ -8,7 +8,6 @@ public class PlayerScript : MonoBehaviour {
     public Rigidbody2D rbPlayer;
     public Slider sliderPower;
     public GameObject shooter;
-    public GameObject playerGas;
     public GameObject playerAngle;
     private Rigidbody2D shotsRb2d;
     private bool checkPowerSlider;
@@ -41,7 +40,6 @@ public class PlayerScript : MonoBehaviour {
 
             if (gas >= 0)
             {
-                playerGas.transform.localScale = new Vector2(gas / 100f, 0.1f);
 
                 Vector2 movement = new Vector2(moveSpeedHorizontal, 0f);
 
@@ -162,6 +160,14 @@ public class PlayerScript : MonoBehaviour {
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Fire"))
+        {
+            Health = 0;
+        }
+    }
+
     public void UpdateSlider()
     {
         playerHealthSlider.value = Health;
@@ -173,7 +179,6 @@ public class PlayerScript : MonoBehaviour {
         GameManager.timer = 30;
         gas = 100f;
         maxOrminValue = true;
-        playerGas.transform.localScale = new Vector2(1f, 0.1f);
         hasShot = false;
         roundIsOver = false;
     }

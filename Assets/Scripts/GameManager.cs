@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour {
     }
     private void GameOver()
     {
-
+        timer = 00;
         gameOverScreen.gameObject.SetActive(true);
 
     }

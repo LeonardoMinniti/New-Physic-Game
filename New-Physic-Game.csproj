@@ -285,13 +285,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\bullet.cs" />
-    <Compile Include="Assets\explosion.cs" />
-    <Compile Include="Assets\NewGameScript.cs" />
+    <Compile Include="Assets\MainMenuScript.cs" />
+    <Compile Include="Assets\Scripts\bullet.cs" />
+    <Compile Include="Assets\Scripts\explosion.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\NewGameScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style1.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style2.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style3.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style4.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style5.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style6.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style7.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\pixel_style8.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style1.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style2.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style3.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style4.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style5.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style6.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style7.xml" />
+    <None Include="Assets\Assets\PNG\Spritesheets\vector_style8.xml" />
     <None Include="Assets\Assets\Spritesheet\bgElements_spritesheet.xml" />
     <None Include="Assets\Assets\Spritesheet\spritesheet_complete.xml" />
     <None Include="Assets\Assets\Spritesheet\spritesheet_enemies.xml" />
