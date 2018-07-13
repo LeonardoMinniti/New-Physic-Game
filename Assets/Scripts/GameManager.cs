@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public Rigidbody2D projectile;
+    private Rigidbody2D projectile;
     public static Vector3 windDirection;
     public static GameObject bullet;
     public static float timer;
@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour {
     public static PlayerScript Player2;
     public Image windArrow;
     public Text windStrength;
+    public Image gameOverScreen;
+    public Text gameOverText;
 
     public Text roundText;
 
@@ -33,6 +35,9 @@ public class GameManager : MonoBehaviour {
         Player1.NewRound();
         Player1.UpdateSlider();
         Player2.UpdateSlider();
+
+
+
         
 	}
 	
@@ -42,7 +47,20 @@ public class GameManager : MonoBehaviour {
         UpdateTimer();
         UpdateRound();
         UpdateWind();
-	}
+
+        if (Player1.Health <= 0)
+        {
+            Player1.gameObject.SetActive(false);
+            GameOver();
+            gameOverText.text = ("Congratulations Player 2 Wins!");
+        }
+        else if(Player2.Health <= 0)
+        {
+            Player2.gameObject.SetActive(false);
+            GameOver();
+            gameOverText.text = ("Congratulations Player 1 Wins!");
+        }
+    }
 
     void UpdateWind()
     {
@@ -76,5 +94,11 @@ public class GameManager : MonoBehaviour {
     private void UpdateRound()
     {
         roundText.text = "round : " + round;
+    }
+    private void GameOver()
+    {
+
+        gameOverScreen.gameObject.SetActive(true);
+
     }
 }

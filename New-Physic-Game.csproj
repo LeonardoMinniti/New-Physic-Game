@@ -287,6 +287,7 @@
   <ItemGroup>
     <Compile Include="Assets\bullet.cs" />
     <Compile Include="Assets\explosion.cs" />
+    <Compile Include="Assets\NewGameScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
   </ItemGroup>
