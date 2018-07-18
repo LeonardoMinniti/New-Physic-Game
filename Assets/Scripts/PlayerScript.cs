@@ -55,6 +55,7 @@ public class PlayerScript : MonoBehaviour {
 	}
     private void Update()
     {
+
         if (!roundIsOver)
         {
             if(GameManager.timer <= 0)

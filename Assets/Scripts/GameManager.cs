@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 
 
     public static int round;
+    public static bool bla;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +44,11 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (bla)
+        {
+            StartCoroutine(WaitASecond());
+        }
 
         UpdateTimer();
         UpdateRound();
@@ -84,6 +90,8 @@ public class GameManager : MonoBehaviour {
         if(timer <= 0)
         {
             timertext.text = "Timer : 0";
+            round++;
+            UpdateRound();
         }
         else
         {
@@ -100,5 +108,10 @@ public class GameManager : MonoBehaviour {
         timer = 00;
         gameOverScreen.gameObject.SetActive(true);
 
+    }
+    IEnumerator WaitASecond()
+    {
+        yield return new WaitForSeconds(0.2f);
+        bla = false;
     }
 }
